@@ -1,6 +1,6 @@
 {
   "name": "generator-anubhav-sac",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Yeoman Generator SAC HANA Adapter",
   "homepage": "https://www.youtube.com/channel/UCzEPlO_nyhiE1MkZiufl9iw",
   "author": {
@@ -16,16 +16,10 @@
   "keywords": [
     "mta",
     "multitarget",
-    "haa",
     "hana",
     "hana-analytics-adapter",
-    "saphanaacademy",
-    "hanaacademy",
-    "dpe",
-    "digitalpartnerengineering",
-    "partner",
-    "innovation",
-    "lab",
+    "anubhav",
+    "anubhav oberoy",
     "yeoman-generator"
   ],
   "devDependencies": {
