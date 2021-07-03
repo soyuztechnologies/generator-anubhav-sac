@@ -17,7 +17,7 @@ module.exports = class extends Generator {
 
           return "Please only use alphanumeric characters for the project name.";
         },
-        default: "haa",
+        default: "anubhavhanaadp",
       },
       {
         type: "confirm",
@@ -28,38 +28,46 @@ module.exports = class extends Generator {
       {
         type: "input",
         name: "hdiContainerName",
-        message: "What is the name of your HDI container?",
-        default: "hdi-container",
+        message: "What is the name of your HDI container (Copy from BTP HANA Explorer)?",
+        default: "myhanacon",
+      },
+      {
+        type: "confirm",
+        name: "authorization",
+        message: "Would you like authorization?",
+        default: true,
       },
       {
         type: "input",
-        name: "callingHost",
-        message: "What is the host of your client application?",
-        default: "tenant.region.sapanalytics.cloud",
+        name: "clientHostname",
+        message: "What is the hostname of the client application that will be accessing HAA? Use * for wildcard.",
+        validate: (s) => {
+          if (s === "*") {
+            return true;
+          }
+          if (/^[a-zA-Z0-9.-]*$/g.test(s)) {
+            return true;
+          }
+          return "Please only use alphanumeric characters for the client application hostname or use * for wildcard.";
+        },
+        default: "*"
+      },
+      {
+        type: "confirm",
+        name: "personalizeJWT",
+        message: "Would you like HAA to propagate the application user to SAP HANA Cloud?",
+        default: false
       },
       {
         type: "confirm",
         name: "useNamedUser",
-        message: "Will you be configuring SSO (implies shadow users in HANA)?",
-        default: true,
-      },
-      {
-        type: "confirm",
-        name: "multiTenantSupport",
-        message: "Would you like to add multi-tenant SaaS application support?",
-        default: false,
-      },
+        message: "Would you like HAA to connect to SAP HANA Cloud via JWT-based SSO (this implies shadow users in SAP HANA Cloud)?",
+        default: false
+      }
     ]).then((answers) => {
       if (answers.newDir) {
         this.destinationRoot(`${answers.projectName}`);
       }
-
-      if (answers.multiTenantSupport) {
-        answers.tenantMode = "shared";
-      } else {
-        answers.tenantMode = "dedicated";
-      }
-
       this.config.set(answers);
     });
   }
@@ -89,9 +97,7 @@ module.exports = class extends Generator {
 
   end() {
     this.log("");
-    this.log(
-      "Join latest on www.anubhavtrainings.com & You can download the latest SAP HANA Analytics Adapter WAR file from https://tools.hana.ondemand.com/#hanatools"
-    );
+    this.log("Success! Thanks for choosing AnubhavTrainings.com, You can download the SAP HANA Analytics Adapter from https://tools.hana.ondemand.com/#hanatools ");
     this.log("");
   }
 };
