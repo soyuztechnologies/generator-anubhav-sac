@@ -9,31 +9,43 @@
     "url": "https://www.youtube.com/channel/UCzEPlO_nyhiE1MkZiufl9iw"
   },
   "files": [
-    "generators"
+    "generators",
+    "yeoman.png"
   ],
   "main": "generators/index.js",
   "keywords": [
-    "anubhav-oberoy",
+    "mta",
+    "multitarget",
+    "haa",
+    "hana",
+    "hana-analytics-adapter",
+    "saphanaacademy",
+    "hanaacademy",
+    "dpe",
+    "digitalpartnerengineering",
+    "partner",
+    "innovation",
+    "lab",
     "yeoman-generator"
   ],
   "devDependencies": {
-    "eslint": "^6.6.0",
-    "eslint-config-prettier": "^6.6.0",
-    "eslint-config-xo": "^0.29.1",
-    "eslint-plugin-prettier": "^3.1.4",
-    "husky": "^4.2.5",
-    "jest": "^25.4.0",
-    "lint-staged": "^10.2.11",
-    "prettier": "^2.0.5",
-    "yeoman-assert": "^3.1.0",
-    "yeoman-test": "^2.4.1"
+    "eslint": "^7.29",
+    "eslint-config-prettier": "^8.3",
+    "eslint-config-xo": "^0.37",
+    "eslint-plugin-prettier": "^3.4",
+    "husky": "^4.2",
+    "jest": "^27.0",
+    "lint-staged": "^11.0",
+    "prettier": "^2.3",
+    "yeoman-assert": "^3.1",
+    "yeoman-test": "^6.2"
   },
   "engines": {
     "npm": ">= 4.0.0"
   },
   "dependencies": {
-    "chalk": "^4.1.0",
-    "yeoman-generator": "^4.11.0",
+    "chalk": "^4.1",
+    "yeoman-generator": "^5.3",
     "yosay": "^2.0.2"
   },
   "jest": {
@@ -51,7 +63,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": ""
     }
   },
   "eslintConfig": {
@@ -74,6 +86,5 @@
     "pretest": "eslint .",
     "test": "jest"
   },
-  "repository": "minakshiabap/generator-anubhav-sac",
-  "license": "Apache-2.0"
+  "repository": "anubhavtrainings"
 }

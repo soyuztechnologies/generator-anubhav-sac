@@ -90,7 +90,7 @@ module.exports = class extends Generator {
   end() {
     this.log("");
     this.log(
-      "You can download the SAP HANA Analytics Adapter WAR file from https://tools.hana.ondemand.com/#hanatools"
+      "Join latest on www.anubhavtrainings.com & You can download the latest SAP HANA Analytics Adapter WAR file from https://tools.hana.ondemand.com/#hanatools"
     );
     this.log("");
   }

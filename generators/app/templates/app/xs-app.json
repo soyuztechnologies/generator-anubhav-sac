@@ -4,14 +4,16 @@
   "routes": [
     {
       "source": "/sap/bc/ina",
-      "destination": "<%= projectName %>-srv",
+      "destination": "srv",
       "httpMethods": ["POST", "GET"],
-      "authenticationType": "xsuaa",
-      "scope": "$XSAPPNAME.Viewer"
+<% if(authorization){ -%>
+      "scope": "$XSAPPNAME.Viewer",
+<% } -%>
+      "authenticationType": "xsuaa"
     },
     {
       "source": "/sap/bc/ina",
-      "destination": "<%= projectName %>-srv",
+      "destination": "srv",
       "httpMethods": ["OPTIONS"],
       "authenticationType": "none"
     },
