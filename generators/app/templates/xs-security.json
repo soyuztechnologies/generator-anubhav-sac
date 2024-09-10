@@ -39,6 +39,13 @@
         "$XSAPPNAME.Viewer"
       ]
     }
-  ]
+  ],
+	"oauth2-configuration": {
+		"token-validity": 60000,
+		"refresh-token-validity": 2592000,
+		"redirect-uris": [
+			"https://*.cfapps.us10-001.hana.ondemand.com/login/callback"
+		]
+	}
 <% } -%>
 }
