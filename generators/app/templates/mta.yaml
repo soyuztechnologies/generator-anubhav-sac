@@ -19,10 +19,10 @@ modules:
     parameters:
       memory: 1024M
       disk-quota: 1024M
-      buildpack: sap_java_buildpack
+      buildpack: sap_java_buildpack_jakarta_2_16
     properties:
-      TARGET_RUNTIME: tomee7
-      JBP_CONFIG_RESOURCE_CONFIGURATION: "['tomee7/webapps/ROOT/WEB-INF/resources.xml': {'xsahaa-hdi-container':'<%= hdiContainerName %>'}]"
+      TARGET_RUNTIME: tomcat
+      JBP_CONFIG_RESOURCE_CONFIGURATION: "['tomcat/webapps/ROOT/META-INF/context.xml': {'xsahaa-hdi-container':'<%= hdiContainerName %>'}]"
       PERSONALIZE_JWT: <%= personalizeJWT %>
       USE_NAMED_USER: <%= useNamedUser %>
       SECONDARY_ROUTING_PERCENT: 0
